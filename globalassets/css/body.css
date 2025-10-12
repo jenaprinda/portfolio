@@ -59,3 +59,15 @@ button:active,
 button:focus {
   outline: none;
 };
+
+
+
+
+
+
+
+
+html, body {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}

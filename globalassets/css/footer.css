@@ -24,7 +24,7 @@
   font-size: 20px;
   background: rgba(0, 0, 0, 0.13);
   padding: 10px;
-  margin-right: 30px;
+  margin-right: 2.5dvw;
   border: none;
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
@@ -57,7 +57,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 35px;
-  margin-left: 10px;
+  margin-left: 0.5vw;
 }
 
 /* Base social icons */

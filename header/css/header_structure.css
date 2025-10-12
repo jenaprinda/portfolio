@@ -26,6 +26,7 @@
 
 
 .links {
+    opacity: 0;
     justify-content: flex-end;
     margin-right: 30px;
     display: flex;
@@ -34,6 +35,7 @@
     min-width: 0;
     z-index: 3100;
     padding-top: 5px;
+    transition: opacity 0.5s ease;
 }
 
 /* Center site name */
@@ -41,11 +43,13 @@
 
 /* Links */
 .links a {
+    
     font-size: clamp(24px, 1.5vw, 40px);
     white-space: nowrap;
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.3s, transform 0.3s;
+ /* only set once in CSS */
 
 }
 

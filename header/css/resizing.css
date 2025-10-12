@@ -62,9 +62,7 @@
 
 
 @media (min-width: 1000px) {
-    .links {
-        display: none;
-    }
+    
 
     .site-name {
         display: none;
