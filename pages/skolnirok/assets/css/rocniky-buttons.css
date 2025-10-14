@@ -51,7 +51,7 @@
 }
 
 /* Barevný hover pro jednotlivé ročníky */
-.prvak:hover { background-color: var(--skolnirok-box-prvak); color: var(--skolnirok-box-text); }
+.prvak:hover { background-color: var(--skolnirok-box-prvak); color: var(--skolnirok-box-text);}
 .druhak:hover { background-color: var(--skolnirok-box-druhak); color: var(--skolnirok-box-text); }
 .tretak:hover { background-color: var(--skolnirok-box-tretak); color: var(--skolnirok-box-text); }
 .ctvrtak:hover { background-color: var(--skolnirok-box-ctvrtak); color: var(--skolnirok-box-text); }
@@ -64,10 +64,13 @@
 
 
 button, a {
-  -webkit-tap-highlight-color: transparent;
+    
+    -webkit-tap-highlight-color: transparent;
 }
 
-
+a:hover{
+    color: var(--skolnirok-box-text);
+}
 
 
 

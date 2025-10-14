@@ -47,7 +47,7 @@
     font-size: clamp(24px, 1.5vw, 40px);
     white-space: nowrap;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color-header);
     transition: color 0.3s, transform 0.3s;
  /* only set once in CSS */
 

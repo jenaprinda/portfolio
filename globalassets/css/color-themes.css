@@ -1,14 +1,14 @@
 
 [data-theme="dark"] {
     background: #111;
-    background: url("../background/black4.png");
+    background: #0c0c0c;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
 
   --text-color-logo: rgb(184, 187, 202);
-  --text-color: rgb(184, 187, 202);
+  --text-color: #dfdedc;
   --countdown-text-color: white;
   --site-header-box-border:  #000000;
   --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
@@ -28,10 +28,13 @@
   --mobile-links-background:  #00000038;
   --skolnirok-button: #2a2a2a;
   --infis-logo-background-introduction: #212a37;
-  --history-background-color: rgb(85, 97, 160);
+  --history-background-color: rgb(184, 186, 199);
   --mainpage-info-links-color: rgb(185, 185, 185);
   --accent-color: rgb(73, 73, 73);
   --links-hover-color: #636262;
+  --text-color-header: white;
+  --text-color-quote1: #1a0033; /* dark purple */
+  --text-color-quote2: #4b0082; /* deep purple accent */
 
 }
 
@@ -40,15 +43,15 @@
 
 
 [data-theme="white"] {
-    background: url("../background/white.jpg");
+    background: #fffbec;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
   
-  --text-color: rgb(22, 25, 26);
+  --text-color: rgb(43, 55, 59);
   --countdown-text-color: rgb(0, 0, 0);
-  --site-header-box-border:  #000000;
+  --site-header-box-border:  #644040;
   --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
   --skolnirok-box-timeline: #ee4e4e4b;
   --skolnirok-button-click-background: #1f1f1f;
@@ -66,14 +69,17 @@
   --mobile-links-background:  #00000038;
   --skolnirok-button: #9b9b9b;
   --infis-logo-background-introduction: #212a37;
-  --history-background-color: yellowgreen;
+  --history-background-color: rgb(169, 172, 173);
   --mainpage-info-links-color: rgb(199, 153, 153);
   --accent-color: #aaa;
-  --links-hover-color: #F56217;
+  --links-hover-color: #000000;
+  --text-color-header: black;
+  --text-color-quote1: #1a0033; /* dark purple */
+  --text-color-quote2: #4b0082; /* deep purple accent */
 }
 
 [data-theme="blue"] {
-    background: url("../background/blue.jpg");
+    background: #020f3c;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -81,7 +87,7 @@
     
   --home-icon: url("../../globalassets/home-icon-white.png");
   --countdown-text-color: rgb(144, 177, 239);
-  --text-color: rgb(255, 255, 255);
+  --text-color: rgb(144, 177, 239);
   --site-header-box-border:  #ffffff2e;
   --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
   --skolnirok-box-timeline: #ee4e4e4b;
@@ -98,12 +104,15 @@
   --site-header-box-shadow:  #00000066;
   --mobile-links-hover:   #0000003d;
   --mobile-links-background:  #ffffff;
-  --skolnirok-button: #6d74c2;
+  --skolnirok-button: #1f2458;
   --infis-logo-background-introduction: #212a37;
   --history-background-color: #001219ff;
   --mainpage-info-links-color: rgb(80, 156, 226);
   --accent-color: #aaa;
   --links-hover-color: rgb(125, 158, 228);
+  --text-color-header: white;
+  --text-color-quote1: #001a33; /* dark blue */
+  --text-color-quote2: #004b82; /* deep blue accent */
 
 }
 
@@ -135,6 +144,9 @@
   --mainpage-info-links-color: #0B486B;
   --accent-color: #aaa;
   --links-hover-color: #F56217;
+  --text-color-header: white;
+  --text-color-quote1: #33001a; /* dark magenta */
+  --text-color-quote2: #82004b; /* magenta accent */
 
 }
 
