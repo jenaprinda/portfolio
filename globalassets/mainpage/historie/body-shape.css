@@ -6,6 +6,7 @@
   background: var(--history-background-color);
   z-index: 100000;
   border-top: 10px solid;
+  border-bottom: 10px solid;
   width: 100%;
   height: 400px;
   position: relative;       /* needed if we want absolute positioning of .citaty */
