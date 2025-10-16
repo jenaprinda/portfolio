@@ -22,7 +22,7 @@
 
 /* Animate on hover */
 .home-screen-info-links a:hover::after {
-    width: 100%;              /* full underline */
+    width: 50%;       /* full underline */
     left: 50%;
     transform: translateX(-50%); /* keep centered as it grows */
 }
