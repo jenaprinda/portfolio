@@ -1,0 +1,134 @@
+/* --- Fade-up + opacity for About Me Section --- */
+.main-page-about-me {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.main-page-about-me.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Text elements with gradient animation --- */
+.main-page-about-me-text,
+.main-page-about-me-column-info,
+.main-page-about-me-regular-info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/* Visible state for text elements */
+.main-page-about-me.is-visible .main-page-about-me-text {
+  opacity: 1;
+  transform: translateY(0);
+  background-image: var(--about-me-page-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-delay: 0s;
+}
+
+.main-page-about-me.is-visible .main-page-about-me-column-info {
+  opacity: 1;
+  transform: translateY(0);
+  background-image: var(--about-me-section-bg-gradient-full);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-delay: 0s;
+}
+
+.main-page-about-me.is-visible .main-page-about-me-regular-info {
+  opacity: 1;
+  transform: translateY(0);
+  background-image: var(--about-me-section-bg-gradient-full);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-delay: 0s;
+}
+
+/* --- Hover scale for individual info items --- */
+.main-page-about-me .name,
+.main-page-about-me .age,
+.main-page-about-me .home,
+.main-page-about-me .school,
+.main-page-about-me .life-situation,
+.main-page-about-me .employment {
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease, padding 0.2s;
+  cursor: default;
+
+  /* Gradient fix */
+    background-image: var(--about-me-section-bg-gradient-full);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform-origin: center;
+}
+
+.main-page-about-me .name:hover,
+.main-page-about-me .age:hover,
+.main-page-about-me .home:hover,
+.main-page-about-me .school:hover,
+.main-page-about-me .life-situation:hover,
+.main-page-about-me .employment:hover {
+  padding: 1px;
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+
+
+
+
+
+/* --- Regular Info text --- */
+.main-page-about-me-regular-info {
+  font-family: "JetBrainsMono", monospace;
+
+  /* Gradient text */
+  background: var(--about-me-section-bg-gradient-full);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* Animace při scrollu */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.3s ease;
+  will-change: opacity, transform;
+
+  /* Kopírování textu */
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* --- Když se sekce objeví --- */
+.main-page-about-me.is-visible .main-page-about-me-regular-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Hover efekt (jemné zesvětlení + scale) --- */
+.main-page-about-me-regular-info:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* --- Výběr textu (selection barva) --- */
+.main-page-about-me-regular-info::selection {
+  background: var(--main-color-selection-box); /* jemně zlatý průhledný highlight */
+  color: var(--main-color-selection-text);
+}
+
+.main-page-about-me-regular-info::-moz-selection {
+  background: rgba(59, 163, 45, 0.35);
+  color: #fff;
+}

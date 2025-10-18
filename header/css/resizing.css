@@ -135,5 +135,12 @@
      .profile {
         letter-spacing: normal;
      }
-    
+
+
+    .main-page-about-me-column-info div{
+    flex-direction: row;
+    }
 }
+
+
+

@@ -35,7 +35,8 @@
   --text-color-header: white;
   --text-color-quote1: #1a0033; /* dark purple */
   --text-color-quote2: #4b0082; /* deep purple accent */
-
+  --main-color-selection-text: white;
+  --main-color-selection-box:red;
 }
 
 
