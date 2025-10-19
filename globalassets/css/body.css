@@ -71,3 +71,14 @@ html, body {
   transition: opacity 0.5s ease, transform 0.5s ease;
   will-change: opacity, transform;
 }
+
+
+
+.other{
+  height: 1000px;
+}
+
+
+:focus {
+  outline: none;
+}

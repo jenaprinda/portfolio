@@ -1,6 +1,6 @@
 
 [data-theme="dark"] {
-    background: #111;
+    --background: #111;
     background: #0c0c0c;
     background-repeat: no-repeat;
     background-position: center center;
@@ -37,6 +37,18 @@
   --text-color-quote2: #4b0082; /* deep purple accent */
   --main-color-selection-text: white;
   --main-color-selection-box:red;
+  /* Gradients */
+  --about-me-page-gradient-top: #3a1c71;
+  --about-me-page-gradient-middle: #d76d77;
+  --about-me-page-gradient-bottom: #ffaf7b;
+  --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+  --about-me-section-bg-gradient-full: linear-gradient(
+    170deg,
+    var(--about-me-page-gradient-top),
+    var(--about-me-page-gradient-middle),
+    var(--about-me-page-gradient-bottom)
+  );
+  --reveal-size: 0%;
 }
 
 
