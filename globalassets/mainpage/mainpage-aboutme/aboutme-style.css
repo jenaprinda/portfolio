@@ -4,15 +4,11 @@ body {
   margin: 0;
 }
 
-.about-me-wrapper {
-  height: 300vh; /* enough scroll space for sticky effect */
-  position: sticky;
-}
 
 
 /* --- About Me Section: sticky + circular reveal --- */
 .main-page-about-me {
-  position: sticky;
+  position: relative;
   top: 0px;
   z-index: 1;
   width: 100%;
@@ -20,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem; /* default for desktop */
   text-align: center;
 
   /* Section background for circular reveal */
@@ -86,7 +82,7 @@ body {
 /* --- Regular Info --- */
 .main-page-about-me-regular-info-mask {
   max-width: 800px;
-  overflow: hidden;
+  overflow-x: hidden;
   text-align: justify;
 }
 
@@ -96,4 +92,48 @@ body {
   line-height: 1.6;
 
   color: inherit; /* inherit section color */
+}
+
+
+
+
+
+
+
+
+
+
+.infis-text {
+
+
+  font-family: "Poppins", sans-serif;
+     font-weight: bolder;
+      background: none;
+  }
+
+
+
+
+@media (max-width: 1000px) {
+    .main-page-about-me {
+    padding: 2rem 0rem; /* smaller padding for mobile */
+  }
+  /* Scale down the main boxes */
+  .main-page-about-me-box {
+    max-width: 90%; /* reduce width on smaller screens */
+  }
+
+  .main-page-about-me-info-box {
+    gap: 2rem; /* smaller gap between items */
+    flex-direction: column; /* stack items vertically if needed */
+    align-items: center;
+  }
+
+  .main-page-about-me-column-info {
+    font-size: clamp(1rem, 3vw, 1.8rem); /* smaller but still readable */
+  }
+
+  .main-page-about-me-regular-info-mask {
+    max-width: 90%; /* scale down content width */
+  }
 }

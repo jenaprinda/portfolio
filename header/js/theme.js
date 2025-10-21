@@ -1,5 +1,5 @@
 // Cycle themes: dark → white → blue
-const themes = ["dark", "white", "blue", "ocean-sunset"];
+const themes = ["dark", "white", "blue"];
 let current = 0; // starts at 0 = dark
 
 const themeBtns = document.querySelectorAll(".themeToggle"); // all buttons

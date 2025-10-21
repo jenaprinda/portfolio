@@ -140,6 +140,13 @@
     .main-page-about-me-column-info div{
     flex-direction: row;
     }
+
+    .main-page-about-me-box {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+}
 }
 
 

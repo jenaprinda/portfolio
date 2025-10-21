@@ -6,8 +6,8 @@ body {
     padding: 0;
     height: 100dvh;
     width: 100%;
-    overflow: hidden;
-    overflow-y: auto;
+
+    overflow-x: hidden;
     margin: 0px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -18,7 +18,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: auto;
+    overflow: hidden;
 
 
 
@@ -44,15 +44,6 @@ a {
     scale: 1;
   }
 }
-
-
-* {
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-};
 
 button, 
 button:active, 

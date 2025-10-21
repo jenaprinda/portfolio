@@ -1,180 +1,385 @@
 
 [data-theme="dark"] {
-    --background: #111;
+    
+
+
+    /* ==============================
+    Header & Site Colors
+    ============================== */
+  --header-background-color-desktop: #0c0c0c;
+  --site-header-background: #ffffff14;
+  --site-header-box-shadow: #00000066;
+  --site-header-box-border: #000000;
+  --text-color-header: white;
+  --infis-logo-background-introduction: #212a37;
+
+  /* ==============================
+    Page Backgrounds
+    ============================== */
     background: #0c0c0c;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  --background: #111;
+  --history-background-color: rgb(184, 186, 199);
+  --mobile-links-background: #00000038;
+  --mobile-links-background-color: #ffffff1a;
+  --mobile-links-hover: #0000003d;
 
-
+  /* ==============================
+    Text & Typography
+    ============================== */
   --text-color-logo: rgb(184, 187, 202);
   --text-color: #dfdedc;
   --countdown-text-color: white;
-  --site-header-box-border:  #000000;
-  --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
-  --skolnirok-box-timeline: #ee4e4e4b;
+  --links-hover-color: #636262;
+  --mainpage-info-links-color: rgb(185, 185, 185);
+
+  /* ==============================
+    Buttons & Interactive Elements
+    ============================== */
+  --skolnirok-button: #2a2a2a;
   --skolnirok-button-click-background: #1f1f1f;
+  --burger-menu-background-color: #fff;
+  --burger-menu-background-color-cross: #CC161F;
+
+  /* ==============================
+    Skolnirok Timeline / Boxes
+    ============================== */
+  --skolnirok-timeline-progress: linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
+  --skolnirok-box-timeline: #ee4e4e4b;
   --skolnirok-box-text: white;
   --skolnirok-box-prvak: #AF3E3E;
   --skolnirok-box-druhak: #A3DC9A;
   --skolnirok-box-tretak: #555879;
   --skolnirok-box-ctvrtak: #F08787;
-  --mobile-links-background-color: #ffffff1a;
-  --burger-menu-background-color-cross: #CC161F;
-  --burger-menu-background-color: #fff;
-  --site-header-background: #ffffff14;
-  --site-header-box-shadow:  #00000066;
-  --mobile-links-hover:   #0000003d;
-  --mobile-links-background:  #00000038;
-  --skolnirok-button: #2a2a2a;
-  --infis-logo-background-introduction: #212a37;
-  --history-background-color: rgb(184, 186, 199);
-  --mainpage-info-links-color: rgb(185, 185, 185);
+
+  /* ==============================
+    Accent Colors
+    ============================== */
   --accent-color: rgb(73, 73, 73);
-  --links-hover-color: #636262;
-  --text-color-header: white;
-  --text-color-quote1: #1a0033; /* dark purple */
-  --text-color-quote2: #4b0082; /* deep purple accent */
   --main-color-selection-text: white;
-  --main-color-selection-box:red;
-  /* Gradients */
+  --main-color-selection-box: red;
+
+  /* ==============================
+    About Me Page Gradients
+    ============================== */
   --about-me-page-gradient-top: #3a1c71;
   --about-me-page-gradient-middle: #d76d77;
   --about-me-page-gradient-bottom: #ffaf7b;
   --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
   --about-me-section-bg-gradient-full: linear-gradient(
-    170deg,
-    var(--about-me-page-gradient-top),
-    var(--about-me-page-gradient-middle),
-    var(--about-me-page-gradient-bottom)
+      170deg,
+      var(--about-me-page-gradient-top),
+      var(--about-me-page-gradient-middle),
+      var(--about-me-page-gradient-bottom)
   );
+
+  /* ==============================
+    Quotes
+    ============================== */
+  --text-color-quote1: #1a0033; /* dark purple */
+  --text-color-quote2: #4b0082; /* deep purple accent */
+
+  /* ==============================
+    Misc / Sizes
+    ============================== */
   --reveal-size: 0%;
 }
 
 
 
 
-
 [data-theme="white"] {
+    /* ==============================
+       General Background
+       ============================== */
     background: #fffbec;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
-  
-  --text-color: rgb(43, 55, 59);
-  --countdown-text-color: rgb(0, 0, 0);
-  --site-header-box-border:  #644040;
-  --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
-  --skolnirok-box-timeline: #ee4e4e4b;
-  --skolnirok-button-click-background: #1f1f1f;
-  --skolnirok-box-text: white;
-  --skolnirok-box-prvak: #AF3E3E;
-  --skolnirok-box-druhak: #A3DC9A;
-  --skolnirok-box-tretak: #555879;
-  --skolnirok-box-ctvrtak: #F08787;
-  --mobile-links-background-color: #ffffff1a;
-  --burger-menu-background-color-cross: #c24046;
-  --burger-menu-background-color: rgb(0, 0, 0);
-  --site-header-background: #ffffff5e;
-  --site-header-box-shadow:  #f5f0f034;
-  --mobile-links-hover:   #0000003d;
-  --mobile-links-background:  #00000038;
-  --skolnirok-button: #9b9b9b;
-  --infis-logo-background-introduction: #212a37;
-  --history-background-color: rgb(169, 172, 173);
-  --mainpage-info-links-color: rgb(199, 153, 153);
-  --accent-color: #aaa;
-  --links-hover-color: #000000;
-  --text-color-header: black;
-  --text-color-quote1: #1a0033; /* dark purple */
-  --text-color-quote2: #4b0082; /* deep purple accent */
+    /* ==============================
+       Header & Site Colors
+       ============================== */
+    --header-background-color-desktop: white; /* missing in original, set to white */
+    --site-header-background: #ffffff5e;
+    --site-header-box-shadow: #f5f0f034;
+    --site-header-box-border: #644040;
+    --text-color-header: black;
+    --infis-logo-background-introduction: #212a37;
+
+    /* ==============================
+       Page Backgrounds
+       ============================== */
+    --background: #fffbec; /* missing in original, set to white-like background */
+    --history-background-color: rgb(169, 172, 173);
+    --mobile-links-background: #00000038;
+    --mobile-links-background-color: #ffffff1a;
+    --mobile-links-hover: #0000003d;
+
+    /* ==============================
+       Text & Typography
+       ============================== */
+    --text-color-logo: white; /* missing, default to white */
+    --text-color: rgb(43, 55, 59);
+    --countdown-text-color: rgb(0, 0, 0);
+    --links-hover-color: #000000;
+    --mainpage-info-links-color: rgb(199, 153, 153);
+
+    /* ==============================
+       Buttons & Interactive Elements
+       ============================== */
+    --skolnirok-button: #9b9b9b;
+    --skolnirok-button-click-background: #1f1f1f;
+    --burger-menu-background-color: rgb(0, 0, 0);
+    --burger-menu-background-color-cross: #c24046;
+
+    /* ==============================
+       Skolnirok Timeline / Boxes
+       ============================== */
+    --skolnirok-timeline-progress: linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
+    --skolnirok-box-timeline: #ee4e4e4b;
+    --skolnirok-box-text: white;
+    --skolnirok-box-prvak: #AF3E3E;
+    --skolnirok-box-druhak: #A3DC9A;
+    --skolnirok-box-tretak: #555879;
+    --skolnirok-box-ctvrtak: #F08787;
+
+    /* ==============================
+       Accent Colors
+       ============================== */
+    --accent-color: #aaa;
+    --main-color-selection-text: white; /* missing, default to white */
+    --main-color-selection-box: white;  /* missing, default to white */
+
+    /* ==============================
+       About Me Page Gradients
+       ============================== */
+    --about-me-page-gradient-top: #3a1c71; /* using dark theme as template */
+    --about-me-page-gradient-middle: #d76d77;
+    --about-me-page-gradient-bottom: #ffaf7b;
+    --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+    --about-me-section-bg-gradient-full: linear-gradient(
+        170deg,
+        var(--about-me-page-gradient-top),
+        var(--about-me-page-gradient-middle),
+        var(--about-me-page-gradient-bottom)
+    );
+
+    /* ==============================
+       Quotes
+       ============================== */
+    --text-color-quote1: #1a0033; /* dark purple */
+    --text-color-quote2: #4b0082; /* deep purple accent */
+
+    /* ==============================
+       Misc / Sizes
+       ============================== */
+    --reveal-size: 0%;
 }
 
+
 [data-theme="blue"] {
+    /* ==============================
+       General Background
+       ============================== */
     background: #020f3c;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
-    
-  --home-icon: url("../../globalassets/home-icon-white.png");
-  --countdown-text-color: rgb(144, 177, 239);
-  --text-color: rgb(144, 177, 239);
-  --site-header-box-border:  #ffffff2e;
-  --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
-  --skolnirok-box-timeline: #ee4e4e4b;
-  --skolnirok-button-click-background: #1f1f1f;
-  --skolnirok-box-text: white;
-  --skolnirok-box-prvak: #0096c7ff;
-  --skolnirok-box-druhak: rgb(1, 77, 117);
-  --skolnirok-box-tretak: #00b4d8ff;
-  --skolnirok-box-ctvrtak: #023e8aff;
-  --mobile-links-background-color: #ffffff1a;
-  --burger-menu-background-color-cross: #c24046;
-  --burger-menu-background-color: rgb(186, 232, 241);
-  --site-header-background: #ffffff14;
-  --site-header-box-shadow:  #00000066;
-  --mobile-links-hover:   #0000003d;
-  --mobile-links-background:  #ffffff;
-  --skolnirok-button: #1f2458;
-  --infis-logo-background-introduction: #212a37;
-  --history-background-color: #001219ff;
-  --mainpage-info-links-color: rgb(80, 156, 226);
-  --accent-color: #aaa;
-  --links-hover-color: rgb(125, 158, 228);
-  --text-color-header: white;
-  --text-color-quote1: #001a33; /* dark blue */
-  --text-color-quote2: #004b82; /* deep blue accent */
+    /* ==============================
+       Header & Site Colors
+       ============================== */
+    --header-background-color-desktop: white; /* missing, default to white */
+    --site-header-background: #ffffff14;
+    --site-header-box-shadow: #00000066;
+    --site-header-box-border: #ffffff2e;
+    --text-color-header: white;
+    --infis-logo-background-introduction: #212a37;
 
+    /* ==============================
+       Page Backgrounds
+       ============================== */
+    --background: #020f3c; /* main background for blue theme */
+    --history-background-color: #001219ff;
+    --mobile-links-background: #ffffff;
+    --mobile-links-background-color: #ffffff1a;
+    --mobile-links-hover: #0000003d;
+
+    /* ==============================
+       Text & Typography
+       ============================== */
+    --text-color-logo: white; /* missing, default to white */
+    --text-color: rgb(144, 177, 239);
+    --countdown-text-color: rgb(144, 177, 239);
+    --links-hover-color: rgb(125, 158, 228);
+    --mainpage-info-links-color: rgb(80, 156, 226);
+
+    /* ==============================
+       Buttons & Interactive Elements
+       ============================== */
+    --skolnirok-button: #1f2458;
+    --skolnirok-button-click-background: #1f1f1f;
+    --burger-menu-background-color: rgb(186, 232, 241);
+    --burger-menu-background-color-cross: #c24046;
+
+    /* ==============================
+       Skolnirok Timeline / Boxes
+       ============================== */
+    --skolnirok-timeline-progress: linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
+    --skolnirok-box-timeline: #ee4e4e4b;
+    --skolnirok-box-text: white;
+    --skolnirok-box-prvak: #0096c7ff;
+    --skolnirok-box-druhak: rgb(1, 77, 117);
+    --skolnirok-box-tretak: #00b4d8ff;
+    --skolnirok-box-ctvrtak: #023e8aff;
+
+    /* ==============================
+       Accent Colors
+       ============================== */
+    --accent-color: #aaa;
+    --main-color-selection-text: white; /* missing, default to white */
+    --main-color-selection-box: white;  /* missing, default to white */
+
+    /* ==============================
+       About Me Page Gradients
+       ============================== */
+    --about-me-page-gradient-top: #3a1c71; /* template from dark theme */
+    --about-me-page-gradient-middle: #d76d77;
+    --about-me-page-gradient-bottom: #ffaf7b;
+    --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+    --about-me-section-bg-gradient-full: linear-gradient(
+        170deg,
+        var(--about-me-page-gradient-top),
+        var(--about-me-page-gradient-middle),
+        var(--about-me-page-gradient-bottom)
+    );
+
+    /* ==============================
+       Quotes
+       ============================== */
+    --text-color-quote1: #001a33; /* dark blue */
+    --text-color-quote2: #004b82; /* deep blue accent */
+
+    /* ==============================
+       Misc / Sizes
+       ============================== */
+    --reveal-size: 0%;
+
+    /* ==============================
+       Custom / Icons
+       ============================== */
+    --home-icon: url("../../globalassets/home-icon-white.png");
 }
 
 
 [data-theme="ocean-sunset"] {
+    /* ==============================
+       General Background
+       ============================== */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
-  --home-icon: url("../../globalassets/home-icon-white.png");
+    /* ==============================
+       Header & Site Colors
+       ============================== */
+    --header-background-color-desktop: white; /* missing, default to white */
+    --site-header-background: #ffffff14;
+    --site-header-box-shadow: #00000066;
+    --site-header-box-border: #ffffff2e;
+    --text-color-header: white;
+    --infis-logo-background-introduction: #212a37;
 
-  --countdown-text-color: rgb(126, 150, 194);
-  --text-color: rgb(255, 255, 255);
-  --site-header-box-border:  #ffffff2e;
-  --skolnirok-timeline-progress:  linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
-  --skolnirok-box-timeline: #ee4e4e4b;
-  --skolnirok-button-click-background: #1f1f1f;
-  --skolnirok-box-text:#ffffff;
-  --skolnirok-box-prvak: #bb3e03ff;
-  --skolnirok-box-druhak: #ae2012ff;
-  --skolnirok-box-tretak: rgb(187, 55, 3);
-  --skolnirok-box-ctvrtak: #9b2226ff;
-  --mobile-links-background-color: #ffffff1a;
-  --burger-menu-background-color-cross: #c24046;
-  --burger-menu-background-color: rgb(186, 232, 241);
-  --site-header-background: #ffffff14;
-  --site-header-box-shadow:  #00000066;
-  --mobile-links-hover:   #0000003d;
-  --mobile-links-background:  #ffffff;
-  --skolnirok-button: rgba(0, 0, 0, 0.096);
-  --infis-logo-background-introduction: #212a37;
-  --mainpage-info-links-color: #0B486B;
-  --accent-color: #aaa;
-  --links-hover-color: #F56217;
-  --text-color-header: white;
-  --text-color-quote1: #33001a; /* dark magenta */
-  --text-color-quote2: #82004b; /* magenta accent */
+    /* ==============================
+       Page Backgrounds
+       ============================== */
+    --history-background-color: white; /* missing, default to white */
+    --mobile-links-background: #ffffff;
+    --mobile-links-background-color: #ffffff1a;
+    --mobile-links-hover: #0000003d;
 
+    /* ==============================
+       Text & Typography
+       ============================== */
+    --text-color-logo: white; /* missing, default to white */
+    --text-color: rgb(255, 255, 255);
+    --countdown-text-color: rgb(126, 150, 194);
+    --links-hover-color: #F56217;
+    --mainpage-info-links-color: #0B486B;
+
+    /* ==============================
+       Buttons & Interactive Elements
+       ============================== */
+    --skolnirok-button: rgba(0, 0, 0, 0.096);
+    --skolnirok-button-click-background: #1f1f1f;
+    --burger-menu-background-color: rgb(186, 232, 241);
+    --burger-menu-background-color-cross: #c24046;
+
+    /* ==============================
+       Skolnirok Timeline / Boxes
+       ============================== */
+    --skolnirok-timeline-progress: linear-gradient(90deg, #F6EEC9, #A1DD70, #799351);
+    --skolnirok-box-timeline: #ee4e4e4b;
+    --skolnirok-box-text: #ffffff;
+    --skolnirok-box-prvak: #bb3e03ff;
+    --skolnirok-box-druhak: #ae2012ff;
+    --skolnirok-box-tretak: rgb(187, 55, 3);
+    --skolnirok-box-ctvrtak: #9b2226ff;
+
+    /* ==============================
+       Accent Colors
+       ============================== */
+    --accent-color: #aaa;
+    --main-color-selection-text: white; /* missing, default to white */
+    --main-color-selection-box: white;  /* missing, default to white */
+
+    /* ==============================
+       About Me Page Gradients
+       ============================== */
+    --about-me-page-gradient-top: #3a1c71; /* template from dark theme */
+    --about-me-page-gradient-middle: #d76d77;
+    --about-me-page-gradient-bottom: #ffaf7b;
+    --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+    --about-me-section-bg-gradient-full: linear-gradient(
+        170deg,
+        var(--about-me-page-gradient-top),
+        var(--about-me-page-gradient-middle),
+        var(--about-me-page-gradient-bottom)
+    );
+
+    /* ==============================
+       Quotes
+       ============================== */
+    --text-color-quote1: #33001a; /* dark magenta */
+    --text-color-quote2: #82004b; /* magenta accent */
+
+    /* ==============================
+       Misc / Sizes
+       ============================== */
+    --reveal-size: 0%;
+
+    /* ==============================
+       Custom / Icons
+       ============================== */
+    --home-icon: url("../../globalassets/home-icon-white.png");
 }
+
+
+
+
+
+
+
+
+
 
 
   /* Sunset CSS Linear Gradient Background */
   [data-theme="ocean-sunset"]{
-    background: #0B486B;
-    background: linear-gradient(
-      to bottom,
-      #0B486B,#F56217
-    );
-  }
-
-  [data-theme="ocean-sunset"] .theme-btn{
-    font-size: 28px;
+    background: linear-gradient(to bottom, #0B486B, #F56217);
+    background-repeat: repeat;          /* repeat if needed */
+    background-size: cover;             /* cover the whole viewport */
+    background-attachment: fixed;
   }
 
 
@@ -203,30 +408,7 @@ body[data-theme="ocean-sunset"] {
 }
 
 
-
-[data-theme="dark"] {
-  --scrollbar-thumb: #333;
-  --scrollbar-thumb-hover: #555;
-}
-
-/* WHITE THEME */
-[data-theme="white"] {
-  --scrollbar-thumb: #b0b0b0;
-  --scrollbar-thumb-hover: #888;
-}
-
-/* BLUE THEME */
-[data-theme="blue"] {
-  --scrollbar-thumb: #0077b6;
-  --scrollbar-thumb-hover: #00b4d8;
-}
-
-/* OCEAN-SUNSET THEME */
-[data-theme="ocean-sunset"] {
-  --scrollbar-thumb: linear-gradient(180deg, #F56217, #0B486B);
-  --scrollbar-thumb-hover: linear-gradient(180deg, #ff784e, #1a5f85);
-}
-
+/*dark*/
 
 
 [data-theme="dark"] .instagram {
@@ -243,6 +425,10 @@ body[data-theme="ocean-sunset"] {
 
 
 
+/*white*/
+
+
+
 [data-theme="white"] .instagram {
   background-image: url('../icons/instagram-logo-outlined-fat/instagram-white48.png');
 }
@@ -255,6 +441,8 @@ body[data-theme="ocean-sunset"] {
   background-image: url('../icons/gmail-logo-outlined/gmail-white48.png'); /* white version */
 }
 
+
+/*ocean-sunset*/
 
 
 [data-theme="ocean-sunset"] .instagram {
