@@ -1,9 +1,7 @@
 @media (max-width: 1000px) {
-    .footer{
+    .footer {
         display: none;
     }
-
-
 
     .links {
         display: none;
@@ -14,7 +12,7 @@
         flex: 1;
         text-align: center;
         /* leave exact space for logo + hamburger */
-        max-width: calc(100% - (28px + 20px) + (30px + 20px)); 
+        max-width: calc(100% - ((28px + 20px) + (30px + 20px)));
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -28,42 +26,40 @@
         transform: translateY(-50%);
     }
 
-    label { 
+    .burger {
         display: flex;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .burger label {
+        display: flex;
         width: 30px;
         height: 20px;
         cursor: pointer;
         flex-direction: column;
         justify-content: space-between;
-        z-index: 1001; /* make sure it’s clickable */
-
+        z-index: 1001; /* make sure it stays clickable */
     }
 }
 
 @media (max-width: 250px) {
-    .infis-logo-header{
+    .infis-logo-header {
         display: none;
     }
-    
-    
-    label{
+
+    .burger label {
         display: none;
     }
 }
 
 @media (max-width: 150px) {
-    .site-name{
+    .site-name {
         display: none;
     }
 }
 
-
 @media (min-width: 1000px) {
-    
-
     .site-name {
         display: none;
     }
@@ -148,6 +144,3 @@
         justify-content: center;
 }
 }
-
-
-

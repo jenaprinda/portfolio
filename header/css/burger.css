@@ -1,24 +1,22 @@
 #menu_checkbox {
   display: none;
-
 }
 
-label {
-  position: absolute;
-  top: 50%;
-  right: 20px; /* 20px from right */
-  transform: translateY(-50%);
+.burger label {
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: none;
   width: 30px;  /* smaller hamburger */
   height: 20px;
   cursor: pointer;
   display: none;
   flex-direction: column;
   justify-content: space-between;
-   
 }
 
 
-label div {
+.burger label div {
   height: 4px;           /* thin lines */
   width: 100%;
   background-color: var(--burger-menu-background-color);

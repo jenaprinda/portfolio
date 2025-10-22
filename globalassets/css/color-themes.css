@@ -6,12 +6,15 @@
     /* ==============================
     Header & Site Colors
     ============================== */
-  --header-background-color-desktop: #0c0c0c;
+  --header-background-color-desktop: #ffffff2c;
   --site-header-background: #ffffff14;
   --site-header-box-shadow: #00000066;
   --site-header-box-border: #000000;
-  --text-color-header: white;
+  --text-color-header: rgb(255, 255, 255);
   --infis-logo-background-introduction: #212a37;
+  /* Frosted header colors */
+  --header-blur-bg: rgba(0, 0, 0, 0.35);
+  --header-border: rgba(255, 255, 255, 0.08);
 
   /* ==============================
     Page Backgrounds
@@ -71,6 +74,8 @@
       var(--about-me-page-gradient-middle),
       var(--about-me-page-gradient-bottom)
   );
+  --about-me-body-text-gradient: var(--about-me-section-bg-gradient-full);
+  --about-me-text-solid: #eef3ff;
 
   /* ==============================
     Quotes
@@ -105,6 +110,9 @@
     --site-header-box-border: #644040;
     --text-color-header: black;
     --infis-logo-background-introduction: #212a37;
+    /* Frosted header colors */
+    --header-blur-bg: rgba(255, 255, 255, 0.65);
+    --header-border: rgba(0, 0, 0, 0.06);
 
     /* ==============================
        Page Backgrounds
@@ -156,13 +164,15 @@
     --about-me-page-gradient-top: #3a1c71; /* using dark theme as template */
     --about-me-page-gradient-middle: #d76d77;
     --about-me-page-gradient-bottom: #ffaf7b;
-    --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+    --about-me-page-text-gradient: linear-gradient(90deg, #2f3d5e, #5a74c4);
     --about-me-section-bg-gradient-full: linear-gradient(
         170deg,
         var(--about-me-page-gradient-top),
         var(--about-me-page-gradient-middle),
         var(--about-me-page-gradient-bottom)
     );
+    --about-me-body-text-gradient: linear-gradient(90deg, #2f3d5e, #5a74c4);
+    --about-me-text-solid: #1c2638;
 
     /* ==============================
        Quotes
@@ -195,6 +205,9 @@
     --site-header-box-border: #ffffff2e;
     --text-color-header: white;
     --infis-logo-background-introduction: #212a37;
+    /* Frosted header colors */
+    --header-blur-bg: rgba(0, 0, 0, 0.35);
+    --header-border: rgba(255, 255, 255, 0.12);
 
     /* ==============================
        Page Backgrounds
@@ -246,13 +259,15 @@
     --about-me-page-gradient-top: #3a1c71; /* template from dark theme */
     --about-me-page-gradient-middle: #d76d77;
     --about-me-page-gradient-bottom: #ffaf7b;
-    --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+    --about-me-page-text-gradient: linear-gradient(90deg, #cfe4ff, #85b9ff);
     --about-me-section-bg-gradient-full: linear-gradient(
         170deg,
         var(--about-me-page-gradient-top),
         var(--about-me-page-gradient-middle),
         var(--about-me-page-gradient-bottom)
     );
+    --about-me-text-solid: #e7f2ff;
+    --about-me-body-text-gradient: linear-gradient(90deg, #cfe4ff, #85b9ff);
 
     /* ==============================
        Quotes
@@ -289,6 +304,9 @@
     --site-header-box-border: #ffffff2e;
     --text-color-header: white;
     --infis-logo-background-introduction: #212a37;
+    /* Frosted header colors */
+    --header-blur-bg: rgba(0, 0, 0, 0.28);
+    --header-border: rgba(255, 255, 255, 0.14);
 
     /* ==============================
        Page Backgrounds
@@ -339,13 +357,15 @@
     --about-me-page-gradient-top: #3a1c71; /* template from dark theme */
     --about-me-page-gradient-middle: #d76d77;
     --about-me-page-gradient-bottom: #ffaf7b;
-    --about-me-page-text-gradient: linear-gradient(90deg, #ffffff, #ffd579);
+    --about-me-page-text-gradient: linear-gradient(90deg, #fff5dc, #ffd0c8);
     --about-me-section-bg-gradient-full: linear-gradient(
         170deg,
         var(--about-me-page-gradient-top),
         var(--about-me-page-gradient-middle),
         var(--about-me-page-gradient-bottom)
     );
+    --about-me-text-solid: #fff9ea;
+    --about-me-body-text-gradient: linear-gradient(90deg, #fff5dc, #ffd0c8);
 
     /* ==============================
        Quotes

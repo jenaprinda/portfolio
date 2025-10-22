@@ -21,17 +21,38 @@ body {
 
   /* Section background for circular reveal */
   background: transparent;
+  color: var(--about-me-text-solid, #f1f5ff);
 
   /* Circular mask starting at 0 */
   --reveal-size: 0%;
   -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) var(--reveal-size), rgba(0,0,0,0) calc(var(--reveal-size) + 10%));
   mask-image: radial-gradient(circle at center, rgba(0,0,0,1) var(--reveal-size), rgba(0,0,0,0) calc(var(--reveal-size) + 10%));
 
+  /* Animatable circle reveal (works both enter/exit) */
+  -webkit-clip-path: circle(var(--reveal-size) at 50% 50%);
+  clip-path: circle(var(--reveal-size) at 50% 50%);
+
   transform: scale(1);
   opacity: 0;
 
   /* Smooth transitions */
-  transition: opacity 0.2s linear, transform 0.2s linear;
+  transition: clip-path 0.8s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Enter/Exit states driven by JS toggling `.is-visible` */
+.main-page-about-me.is-visible {
+  --reveal-size: 150%;
+  opacity: 1;
+  transform: scale(0.995);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-page-about-me {
+    transition: none !important;
+    -webkit-clip-path: none;
+    clip-path: none;
+    opacity: 1;
+  }
 }
 
 /* Make text visible inside the mask */
@@ -39,7 +60,7 @@ body {
 .main-page-about-me-column-info,
 .main-page-about-me-regular-info {
   opacity: 1; /* text fades with container */
-  color: white; /* visible text inside mask */
+  color: inherit; /* fallback for reduced motion */
 }
 
 /* --- Heading --- */

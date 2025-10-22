@@ -1,8 +1,9 @@
 /* --- About Me Section: base fade + smooth opacity from JS --- */
 .main-page-about-me {
   opacity: 0;
-  transition: opacity 0.7s ease-out;
-  will-change: opacity;
+  /* Include clip-path to avoid overriding earlier transition */
+  transition: clip-path 0.8s ease, opacity 0.7s ease-out, transform 0.4s ease;
+  will-change: clip-path, opacity, transform;
 }
 
 /* --- Text elements (shared fade + gradient ready) --- */
@@ -28,7 +29,7 @@
 .main-page-about-me.is-visible 
 .main-page-about-me-regular-info {
   opacity: 1;
-  background-image: var(--about-me-section-bg-gradient-full);
+  background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
 }
 
 /* --- Info items (hover effects unified) --- */
@@ -37,7 +38,7 @@
   cursor: default;
   transform-origin: center;
   transition: transform 0.3s ease, filter 0.3s ease, padding 0.2s;
-  background-image: var(--about-me-section-bg-gradient-full);
+  background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

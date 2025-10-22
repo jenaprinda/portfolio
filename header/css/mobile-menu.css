@@ -1,42 +1,70 @@
+.mobile-links-background{
+    filter: blur(10px);
+}
+
+
+
+
+
+
+
+
+
+
 .mobile-links {
     display: flex;
     position: fixed;
-    top: 0px;
+    top: var(--header-height, 80px); /* below fixed header */
     left: 0;
-    height: 100%;
+    height: calc(100vh - var(--header-height, 80px));
+    height: calc(100svh - var(--header-height, 80px)); /* modern viewport units */
     width: 100%;
-    overflow-y: hidden;
+    overflow-y: auto;
+    
 
     /* Frosted glass: semi-transparent so backdrop-filter can blur behind it */
-    background-color: rgba(0, 0, 0, 0.253);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px); /* Safari */
+    background-color: rgba(0, 0, 0, 0.25);
+    /* Only blur when open to avoid unnecessary GPU work */
+    will-change: transform;
+    isolation: isolate; /* ensure ::before backdrop isolates correctly */
 
     justify-content: flex-start;
     align-items: stretch;
     transform: translateX(-120%);
     transition: transform 0.4s ease, backdrop-filter 0.4s ease;
     pointer-events: none;
-    z-index: 2000;
+    z-index: 29999; /* below header (30000), above page */
 }
 
 .mobile-links.open {
-
     transform: translateX(0);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(22px) saturate(1.1);
+    -webkit-backdrop-filter: blur(22px) saturate(1.1);
     pointer-events: auto;
+}
+
+/* Fallback overlay layer for platforms with weaker backdrop-filter */
+.mobile-links::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-links.open::before {
+    opacity: 1;
+    backdrop-filter: blur(22px) saturate(1.1);
+    -webkit-backdrop-filter: blur(22px) saturate(1.1);
 }
 
 
 .mobile-links-inner {
-
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 100px;
-    padding-left: 20px;
-
+    padding: 1.5rem 1.25rem 2.25rem;
     justify-content: flex-start; /* links at top */
 }
 
