@@ -128,19 +128,16 @@
 }
 
 @media (max-width: 1000px) {
-     .profile {
+    .profile {
         letter-spacing: normal;
-     }
-
-
-    .main-page-about-me-column-info div{
-    flex-direction: row;
     }
+
+    /* About Me: no special visibility override; keep defaults */
 
     .main-page-about-me-box {
         width: 100%;
         max-width: 1200px;
         display: flex;
         justify-content: center;
-}
+    }
 }

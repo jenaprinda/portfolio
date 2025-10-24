@@ -58,8 +58,8 @@
     Accent Colors
     ============================== */
   --accent-color: rgb(73, 73, 73);
-  --main-color-selection-text: white;
-  --main-color-selection-box: red;
+  --main-color-selection-text: rgb(0, 0, 0);
+  --main-color-selection-box: rgb(255, 255, 255);
 
   /* ==============================
     About Me Page Gradients
@@ -155,8 +155,8 @@
        Accent Colors
        ============================== */
     --accent-color: #aaa;
-    --main-color-selection-text: white; /* missing, default to white */
-    --main-color-selection-box: white;  /* missing, default to white */
+    --main-color-selection-text: #fffbec; /* missing, default to white */
+    --main-color-selection-box: #2f3d5e;  /* missing, default to white */
 
     /* ==============================
        About Me Page Gradients
@@ -250,8 +250,8 @@
        Accent Colors
        ============================== */
     --accent-color: #aaa;
-    --main-color-selection-text: white; /* missing, default to white */
-    --main-color-selection-box: white;  /* missing, default to white */
+    --main-color-selection-text: #020f3c; /* missing, default to white */
+    --main-color-selection-box: #cfe4ff;  /* missing, default to white */
 
     /* ==============================
        About Me Page Gradients
@@ -348,7 +348,7 @@
        Accent Colors
        ============================== */
     --accent-color: #aaa;
-    --main-color-selection-text: white; /* missing, default to white */
+    --main-color-selection-text: greenyellow; /* missing, default to white */
     --main-color-selection-box: white;  /* missing, default to white */
 
     /* ==============================

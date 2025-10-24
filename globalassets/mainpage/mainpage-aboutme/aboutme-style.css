@@ -2,12 +2,14 @@
 body {
   overflow-x: hidden;
   margin: 0;
+
 }
 
 
 
 /* --- About Me Section: sticky + circular reveal --- */
 .main-page-about-me {
+  
   position: relative;
   top: 0px;
   z-index: 1;
@@ -16,7 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem; /* default for desktop */
+  box-sizing: border-box;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
   text-align: center;
 
   /* Section background for circular reveal */
@@ -35,8 +38,7 @@ body {
   transform: scale(1);
   opacity: 0;
 
-  /* Smooth transitions */
-  transition: clip-path 0.8s ease, opacity 0.4s ease, transform 0.4s ease;
+  /* Transitions are enabled for desktop in animations CSS */
 }
 
 /* Enter/Exit states driven by JS toggling `.is-visible` */
@@ -66,7 +68,7 @@ body {
 /* --- Heading --- */
 .main-page-about-me-text {
   font-family: "Poppins", monospace;
-  font-size: 5rem;
+  font-size: clamp(2rem, 6vw, 5rem);
   font-weight: 900;
   margin-bottom: 2rem;
 }
@@ -102,7 +104,7 @@ body {
 
 /* --- Regular Info --- */
 .main-page-about-me-regular-info-mask {
-  max-width: 800px;
+  max-width: 100%;
   overflow-x: hidden;
   text-align: justify;
 }
@@ -136,25 +138,106 @@ body {
 
 
 @media (max-width: 1000px) {
-    .main-page-about-me {
-    padding: 2rem 0rem; /* smaller padding for mobile */
+  /* Layout + spacing tweaks */
+  .main-page-about-me {
+    padding: 2rem 1rem; /* smaller padding for mobile */
+    height: auto; /* avoid forcing full viewport height on phones */
+    min-height: 0;
+
+    /* Disable animations/transitions on mobile */
+    opacity: 1 !important;
+    transition: none !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    transform: none !important;
   }
+
   /* Scale down the main boxes */
   .main-page-about-me-box {
-    max-width: 90%; /* reduce width on smaller screens */
+    max-width: 90vw; /* reduce width on smaller screens */
+    margin: 0 auto; /* center container to avoid right gap */
   }
 
   .main-page-about-me-info-box {
-    gap: 2rem; /* smaller gap between items */
-    flex-direction: column; /* stack items vertically if needed */
-    align-items: center;
+    gap: 1.25rem; /* tighter gap on mobile */
+    flex-direction: column; /* stack items vertically */
+    align-items: center; /* center inner content */
+    margin: 0 auto; /* ensure inner box is centered */
   }
 
+  /* Hide column info on mobile */
   .main-page-about-me-column-info {
-    font-size: clamp(1rem, 3vw, 1.8rem); /* smaller but still readable */
+    display: none !important;
   }
 
   .main-page-about-me-regular-info-mask {
-    max-width: 90%; /* scale down content width */
+    max-width: 90vw;
+    margin: 0 auto; /* center the block container */
+    padding-inline: 0.25rem; /* slight breathing room on edges */
+  }
+
+  .main-page-about-me-regular-info {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    text-align: justify; /* justify text on mobile */
+
+    /* Bring back gradient color on mobile without animations */
+    background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Better justification/line breaks */
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  /* Heading keeps gradient color on mobile, too */
+  .main-page-about-me-text {
+    background-image: var(--about-me-page-text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Ensure text is static (no transitions), keep original colors/gradients */
+  .main-page-about-me-text,
+  .main-page-about-me-column-info,
+  .main-page-about-me-regular-info {
+    opacity: 1 !important;
+    transition: none !important;
+    filter: none !important;
+  }
+
+  .main-page-about-me .info-item,
+  .main-page-about-me .info-item:hover {
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    padding: 0 !important;
+  }
+}
+
+/* Desktop layout tuning: balance gap and widths */
+@media (min-width: 1000px) {
+  .main-page-about-me-info-box {
+    flex-wrap: nowrap; /* keep both blocks on one row */
+    gap: clamp(1.5rem, 4vw, 3rem); /* moderate horizontal gap */
+    align-items: flex-start;
+  }
+
+  .main-page-about-me-column-info {
+    flex: 0 0 clamp(220px, 24vw, 320px); /* fixed, responsive column width */
+    max-width: clamp(220px, 24vw, 320px);
+    text-align: left;
+  }
+
+  .main-page-about-me-regular-info-mask {
+    flex: 1 1 0; /* take remaining space */
+    min-width: 0; /* allow flexbox to shrink content properly */
+    max-width: none; /* remove the earlier 800px cap on desktop */
   }
 }

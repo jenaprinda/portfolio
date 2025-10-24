@@ -1,0 +1,152 @@
+.september{
+    height: auto;
+    width: 100dvw;
+    margin-top: 10vh;
+}
+
+.september-box-forname{
+    display: flex;
+    height: fit-content;
+    width: 100dvw;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.test-personality-text{
+    margin-top: 4vh;
+    text-indent: 0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 1000px;
+  }
+
+  .bars-section {
+    flex: 2;
+  }
+
+  .image-section {
+    flex: 1;
+    text-align: center;
+  }
+
+  .image-section img {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .image-section h3 {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #333;
+  }
+
+  .image-section p {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+
+  .bar {
+    position: relative;
+    height: 12px;
+    border-radius: 10px;
+    background: #e4e4e4;
+    margin: 12px 0 25px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    animation: fillAnimation 1.5s ease-out forwards;
+  }
+
+  @keyframes fillAnimation {
+    from { width: 0; }
+    to { width: var(--target-width); }
+  }
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  /* Barvy pro různé kategorie */
+  .introverted { background: #4cb5f5; --target-width: 73%; animation-delay: 0.2s; }
+  .intuitive { background: #f7c948; --target-width: 63%; animation-delay: 0.4s; }
+  .thinking { background: #5cb85c; --target-width: 61%; animation-delay: 0.6s; }
+  .prospecting { background: #b291f2; --target-width: 56%; animation-delay: 0.8s; }
+  .turbulent { background: #f76c6c; --target-width: 61%; animation-delay: 1s; }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1000px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .image-section {
+      order: -1;
+    }
+
+    .image-section img {
+      width: 140px;
+    }
+
+    .bars-section {
+      width: 100%;
+    }
+  }

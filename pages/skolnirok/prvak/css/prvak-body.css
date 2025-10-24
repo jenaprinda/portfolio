@@ -1,0 +1,58 @@
+#prvak-spacer{
+    width: 100dvw;
+    height: 6dvh;
+}
+
+
+
+#end-spacer{
+    height: 30dvh;
+    width: 100dvw;
+}
+
+
+
+
+
+#prvak-main-box{
+    height: auto;
+    width: 100dvw;
+}
+
+
+#prvak-main-text-box{
+    display: flexbox;
+    justify-self: center;
+    width: clamp(380px, 50vw, 1000px);
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+#prvak-month{
+    display: flex;
+    width: 100dvw;
+    height: fit-content;
+    align-items: center;
+    font-size: calc((3.5dvw + 3.5dvh)/2);
+    padding-left: 15svw;
+    color: var(--text-color);
+}
+
+
+
+#prvak-subtitle{
+    font-size: calc((2.5dvw + 2.5dvh)/2);
+    color: var(--text-color);
+}
+
+#prvak-simple-text{
+    text-align: justify;
+    text-indent: 10%;
+    font-size: calc((1.8dvw + 1.8dvh)/2);
+    color: var(--text-color);
+}

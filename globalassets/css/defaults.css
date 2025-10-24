@@ -1,19 +1,27 @@
+.root {}
+:root {
+  /* Keep subpage header and mobile menu in sync */
+  --header-height: 80px;
+}
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100px;
-    padding: 0 0px;
+    width: 100svw;
+    height: var(--header-height);
+    padding: 0 16px;
+    box-sizing: border-box;
 
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center; /* centers the text */
+    justify-content: center; /* center title; icon/burger are absolute */
     font-family: "Poppins", sans-serif;
-    font-size: clamp(35px, 0vw, 45px); 
     font-weight: bolder;
     color: var(--text-color);
+    z-index: 100;
+    
 }
 
 
@@ -23,12 +31,12 @@
 
 .home-icon {
   position: absolute;
-  left: 45px;     /* horizontal center */
+  left: 24px;                 /* fixed padding from the left */
   top: 50%;                   /* vertical center */
-  transform: translate(-50%, -50%); /* perfect centering */
+  transform: translateY(-50%);/* center vertically only */
   width: 40px;
   height: 40px;
-  z-index: 10000;
+  z-index: 30000;
   
   background-color: var(--text-color-logo, #fff);
   -webkit-mask-image: var(--home-icon);
@@ -45,7 +53,7 @@
 }
 
 .home-icon:hover {
-  transform: translate(-50%, -50%) translateX(-10px) scale(1.15); /* keep transform consistent */
+  transform: translateY(-50%) scale(1.1);
 }
 
 
@@ -61,10 +69,44 @@
 
 
 .default-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    z-index: 10000;
+    z-index: 30000;
+    font-size: clamp(24px, 4.5vw, 44px);
+}
+
+/* Ensure burger aligns to the right on subpages */
+.header .burger {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding: 0 12px;
+  }
+  .home-icon {
+    left: 16px;
+  }
+  .default-name {
+    font-size: clamp(20px, 6vw, 36px);
+  }
+
+.default-name {
+    text-align: center;
+    z-index: 30000;
+}
+
 }
 
 
-/* Dark theme */
 
+
+.header-padding{
+  width: 100svw;
+  height: 80px;
+}

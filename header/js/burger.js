@@ -8,7 +8,7 @@ const html = document.documentElement;
 menuCheckbox.addEventListener('change', () => {
   const isOpen = menuCheckbox.checked;
   mobileMenu.classList.toggle('open', isOpen);
-  html.style.overflow = isOpen ? 'hidden' : ''; // lock/unlock scroll
+  html.style.overflow = isOpen ? 'hidden' : '';
 });
 
 // --- Close menu when clicking outside inner content ---

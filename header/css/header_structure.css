@@ -6,7 +6,7 @@
     transform: translateY(-80%); /* hide initially */
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: var(--header-height);
     z-index: 30000; /* above mobile-links */
     /* Frosted glass header: translucent + background blur (not content) */
@@ -44,7 +44,7 @@
     color: var(--text-color);
     text-align: center;
     white-space: nowrap;
-    z-index: 8000;
+    z-index: 30000;
 }
 
 /* --- Links --- */
@@ -74,7 +74,7 @@
 .infis-logo-header {
   display: none;
   gap: 15px;
-  z-index: 10000;
+  z-index: 30000;
 }
 
 .infis-logo-header img {
@@ -85,7 +85,7 @@
 
 
 .burger{
-    z-index: 10000;
+    z-index: 30000;
     display: none;
     margin-left: auto;
     position: relative;

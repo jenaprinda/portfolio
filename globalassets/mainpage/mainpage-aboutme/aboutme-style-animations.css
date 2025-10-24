@@ -1,79 +1,81 @@
-/* --- About Me Section: base fade + smooth opacity from JS --- */
-.main-page-about-me {
-  opacity: 0;
-  /* Include clip-path to avoid overriding earlier transition */
-  transition: clip-path 0.8s ease, opacity 0.7s ease-out, transform 0.4s ease;
-  will-change: clip-path, opacity, transform;
-}
+@media (min-width: 1000px) {
+  /* --- About Me Section: base fade + smooth opacity from JS --- */
+  .main-page-about-me {
+    opacity: 0;
+    /* Include clip-path to avoid overriding earlier transition */
+    transition: clip-path 0.8s ease, opacity 0.7s ease-out, transform 0.4s ease;
+    will-change: clip-path, opacity, transform;
+  }
 
-/* --- Text elements (shared fade + gradient ready) --- */
-.main-page-about-me-text,
-.main-page-about-me-column-info,
-.main-page-about-me-regular-info {
-  opacity: 0;
-  transition: opacity 0.7s ease-out;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
+  /* --- Text elements (shared fade + gradient ready) --- */
+  .main-page-about-me-text,
+  .main-page-about-me-column-info,
+  .main-page-about-me-regular-info {
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 
-/* --- Visible state (triggered when section in view) --- */
-.main-page-about-me.is-visible .main-page-about-me-text {
-  opacity: 1;
-  background-image: var(--about-me-page-text-gradient);
-}
+  /* --- Visible state (triggered when section in view) --- */
+  .main-page-about-me.is-visible .main-page-about-me-text {
+    opacity: 1;
+    background-image: var(--about-me-page-text-gradient);
+  }
 
-.main-page-about-me.is-visible 
-.main-page-about-me-column-info,
-.main-page-about-me.is-visible 
-.main-page-about-me-regular-info {
-  opacity: 1;
-  background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
-}
+  .main-page-about-me.is-visible 
+  .main-page-about-me-column-info,
+  .main-page-about-me.is-visible 
+  .main-page-about-me-regular-info {
+    opacity: 1;
+    background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
+  }
 
-/* --- Info items (hover effects unified) --- */
-.main-page-about-me .info-item {
-  display: inline-block;
-  cursor: default;
-  transform-origin: center;
-  transition: transform 0.3s ease, filter 0.3s ease, padding 0.2s;
-  background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  will-change: transform, filter;
-}
+  /* --- Info items (hover effects unified) --- */
+  .main-page-about-me .info-item {
+    display: inline-block;
+    cursor: default;
+    transform-origin: center;
+    transition: transform 0.3s ease, filter 0.3s ease, padding 0.2s;
+    background-image: var(--about-me-body-text-gradient, var(--about-me-section-bg-gradient-full));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    will-change: transform, filter;
+  }
 
-.main-page-about-me .info-item:hover {
-  padding: 1px;
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
+  .main-page-about-me .info-item:hover {
+    padding: 1px;
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
 
-/* --- Regular Info text (monospace + selectable gradient) --- */
-.main-page-about-me-regular-info {
-  font-family: "JetBrainsMono", monospace;
-  opacity: 0;
-  transition: opacity 0.8s ease-out, filter 0.3s ease;
-  user-select: text;
-  -webkit-user-select: text;
-}
+  /* --- Regular Info text (monospace + selectable gradient) --- */
+  .main-page-about-me-regular-info {
+    font-family: "JetBrainsMono", monospace;
+    opacity: 0;
+    transition: opacity 0.8s ease-out, filter 0.3s ease;
+    user-select: text;
+    -webkit-user-select: text;
+  }
 
-/* --- Hover effect (soft brighten) --- */
-.main-page-about-me-regular-info:hover {
-  filter: brightness(1.2);
-}
+  /* --- Hover effect (soft brighten) --- */
+  .main-page-about-me-regular-info:hover {
+    filter: brightness(1.2);
+  }
 
-/* --- Custom text selection --- */
-.main-page-about-me-regular-info::selection {
-  background: var(--main-color-selection-box);
-  color: var(--main-color-selection-text);
-}
+  /* --- Custom text selection --- */
+  .main-page-about-me-regular-info::selection {
+    background: var(--main-color-selection-box);
+    color: var(--main-color-selection-text);
+  }
 
-.main-page-about-me-regular-info::-moz-selection {
-  background: rgba(59, 163, 45, 0.35);
-  color: #fff;
+  .main-page-about-me-regular-info::-moz-selection {
+    background: rgba(59, 163, 45, 0.35);
+    color: #fff;
+  }
 }
 
