@@ -30,9 +30,9 @@
 
 
 .home-icon {
-  position: absolute;                 /* fixed padding from the left */
-  top: 50%;                   /* vertical center */
-  transform: translateY(-50%);/* center vertically only */
+  position: absolute;
+  left: 24px;                    
+  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   z-index: 30000;
