@@ -5,23 +5,28 @@
 }
 
 .header {
-    position: fixed;
+  --header-height: 80px;
     top: 0;
     left: 0;
+    right: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: fixed;
     width: 100vw;
     height: var(--header-height);
-    padding: 0 16px;
-    box-sizing: border-box;
-
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center; /* center title; icon/burger are absolute */
-    font-family: "Poppins", sans-serif;
-    font-weight: bolder;
+    z-index: 30000; /* above mobile-links */
+    /* Frosted glass header: translucent + background blur (not content) */
+    background-color: var(--header-blur-bg, rgba(0, 0, 0, 0.35));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Subtle separation from content */
+    border-bottom: 1px solid var(--header-border, rgba(255,255,255,0.08));
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     color: var(--text-color);
-    z-index: 100;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, links right */
+    padding: 0 2rem; /* horizontal padding */
+    box-sizing: border-box;
 }
 
 
@@ -37,6 +42,8 @@
   height: 40px;
   z-index: 30000;
   
+  
+
   background-color: var(--text-color-logo, #fff);
   -webkit-mask-image: var(--home-icon);
   -webkit-mask-repeat: no-repeat;
