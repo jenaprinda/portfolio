@@ -57,3 +57,48 @@
     font-size: clamp(1rem, 2.2vw, 1.375rem);
     color: var(--text-color);
 }
+
+#gallery{
+    margin: 1rem 0 2rem;
+}
+
+#gallery-imports{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 14px;
+    align-items: start;
+}
+
+
+#oct-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--panel-border, rgba(255,255,255,0.08));
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    background: var(--panel-bg, transparent);
+    object-fit: cover;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#oct-img:hover {
+    box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+    cursor: zoom-in;
+}
+
+/* Example per-image overrides (adjust as needed) */
+#oct-img-20 { /* panorama */
+    aspect-ratio: 16 / 9;
+    max-height: 520px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    #gallery-imports { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    #gallery-imports { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+

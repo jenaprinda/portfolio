@@ -1,8 +1,4 @@
-.root {}
-:root {
-  /* Keep subpage header and mobile menu in sync */
-  --header-height: 80px;
-}
+
 
 .header {
   --header-height: 80px;
