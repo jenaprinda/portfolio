@@ -1,0 +1,33 @@
+.kontakt {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#kontakt-box {
+    background: #0000003b;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+    border: 4px solid;
+}
+
+/* --- HOVER EFEKT --- */
+#kontakt-box:hover {
+    cursor: pointer;
+    background-color:#ffffff3b;
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.45);
+}
+
+
+#kontakt-box:focus {
+    background-color:#ffffff3b;
+}
+
+@media (max-width: 1000px){
+    
+}

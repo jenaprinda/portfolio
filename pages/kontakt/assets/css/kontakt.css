@@ -1,0 +1,49 @@
+.kntk-box-wrapper1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.box1,
+.box2 {
+    width: 30vw;
+    height: 40vh;
+}
+
+.box3 {
+    width: 100%;
+    height: 80px;
+}
+
+.box4 {
+    width: 100%;
+    height: 320px;
+}
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .box1#kontakt-box,
+    .box2#kontakt-box {
+        width: 260px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .kntk-box-wrapper1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box1#kontakt-box,
+    .box2#kontakt-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    
+}
