@@ -97,6 +97,7 @@
 
     .home-screen-info-links {
         flex-direction: column;
+        align-items: center; /* center options horizontally on mobile */
     }
 
     .home-screen-info-site-name {

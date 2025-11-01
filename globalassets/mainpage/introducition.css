@@ -158,7 +158,7 @@
     font-size: 32px;
 
     justify-content: center;
-    display: flex;
+    display: inline-flex; /* prevent full-width stretching; keep to text width */
     gap: 100px;
     letter-spacing: -2px;
     transition: color 0.3s, transform 0.3s ease-in-out, letter-spacing 0.3s, font-weight 0.3s ease-in-out;

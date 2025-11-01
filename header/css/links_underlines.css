@@ -4,6 +4,7 @@
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
+    display: inline-block;   /* ensure underline matches text width */
     padding-bottom: 4px;     /* space for underline */
 }
 
@@ -17,12 +18,13 @@
     width: 0;                /* initially invisible */
     background-color: var(--text-color);
     transition: all 0.3s ease;
-    transform: translateX(-50%); /* center the starting point */
+    transform: translateX(-50%);
 }
 
 /* Animate on hover */
-.home-screen-info-links a:hover::after {
-    width: 50%;       /* full underline */
+.home-screen-info-links a:hover::after,
+.home-screen-info-links a:focus-visible::after {
+    width: 100%;       /* full underline */
     left: 50%;
     transform: translateX(-50%); /* keep centered as it grows */
 }
